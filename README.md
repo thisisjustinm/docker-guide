@@ -1,10 +1,8 @@
 ## Docker Guide 
 
 Docker provides a way to run applications securely isolated in a container, packaged with all its dependencies and libraries.
-
-Docker is a platform for developers and sysadmins to develop, deploy, and run applications with containers. The use of Linux containers to deploy applications is called containerization. Containers are not new, but their use for easily deploying applications is.
-
-Docker makes use of container to make it easier to create, deploy, and run applications.
+It is a platform for developers and sysadmins to develop, deploy, and run applications with containers. The use of Linux containers to deploy applications is called containerization. Containers are not new, but their use for easily deploying applications is.
+It makes use of container to make it easier to create, deploy, and run applications.
 
 A *container* is launched by running an *image*. An image is an executable package that includes everything needed to run an application--the code, a runtime, libraries, environment variables, and configuration files.
 
@@ -58,6 +56,9 @@ For more examples and ideas, visit:
  https://docs.docker.com/get-started/
   
 ```
+
+---
+
 ### Playing with [Alpine](https://alpinelinux.org/)
 
 Try out the following commands:
@@ -69,6 +70,8 @@ Try out the following commands:
 * **```docker stop <container_id>```** : To stop a running container.
 * **```docker rm <container_id>```** : To remove the stopped container.
 * **```docker container ```** : To remove all stopped containers.
+
+---
 
 ### Webapps with Docker
 
