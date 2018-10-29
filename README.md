@@ -116,10 +116,10 @@ Once you have created the image, you can push it to the hub, so that others can 
 ### Creating your first webapp
 
 1. Create a webpage ```index.html```. An example code can be found [here](https://pastebin.com/wFzTnCAw).
-2. Create a Docker file
- * FROM nginx:latest
- * COPY index.html /usr/share/nginx/html
- * EXPOSE 3000
+2. Create a Docker file <br>
+FROM nginx:latest<br>
+COPY index.html /usr/share/nginx/html<br>
+EXPOSE 3000<br>
 3. Build the Dockerfile: **```docker build -t yourusername/imagename```** and push it to Docker Hub.
 4. Run the container.
 
