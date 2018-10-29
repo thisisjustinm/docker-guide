@@ -64,7 +64,7 @@ For more examples and ideas, visit:
 
 ### Playing with [Alpine](https://alpinelinux.org/)
 
-Try out the following commands:
+Try out the following commands to get an overview of Docker.:
 
 * **```docker pull alpine:latest```** : This pull fetches latest alpine images and saves it to your system.
 * **```docker run alpine echo "Hello, World" ```** : Runs the alpine container(and then exits it).
@@ -113,7 +113,6 @@ Read more about these [here](https://docs.docker.com/engine/reference/builder/).
 
 ### Creating your first Dockerfile
 
-Please read more about this [here](https://docs.docker.com/get-started/part2/#dockerfile)
 Create a Dockerfile, open it any text editor and add the following:
 
 FROM alpine:latest <br>
@@ -124,6 +123,8 @@ Build this Dockerfile using the command **``` docker build -t yourusername/image
 Here, yourname is you username on [Docker-Hub](https://hub.docker.com) and imagename is the name that you give to the image. The dot is thelocation of the file i.e. the current directory e.g. thisisjustinm/webcat . To run this image, type in the command as **```docker run -d yourusername/imagename```**.
 
 Once you have created the image, you can push it to the hub, so that others can access. To do so, login with command **```docker login```** and login with your docker hub username and password. Once logged in, you can push the image via, **```docker push yourusername/imagename```**. 
+
+Please read more about this [here](https://docs.docker.com/get-started/part2/#dockerfile).
 
 ---
 
