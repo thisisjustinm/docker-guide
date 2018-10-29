@@ -79,12 +79,53 @@ In this example, I will be using a web application already available on the dock
 
 Once you run it, you may get a hash like ```2044d71021a42dc6c06dedcc393f70a3f7c2a0b10435a145c639aa30afff6435f```. This means the container is running. To view/publish at which port the container is running, use the command **```docker port webcat```**. This publishes the port, which we can access in our browser.
 
-To get the IP at which the machine is running use the command **```docker-machine ip default ```** . You may get something like: 
-> 192.68.99.100 (example)
+To get the IP at which the machine is running use the command **```docker-machine ip default ```** . You may get something like: ```192.68.99.100``` (example)
 
-Open the browser and type in the url as:
-> <your_machine_ip>:<port>
+Open the browser and type in the url as: ```<your_machine_ip>:<port>```. e.g. 192.168.99.100:4000
 
 Now, we have sucessfully run a web application with Docker.
 
-### Docker Image
+---
+
+### Creating Docker Images
+
+A Dockerfile is a simple text file that containes a list of commands that Docker client calls while creating an image. Following are the importand Dockerfile commands to remember:
+1. FROM : Used to pull the image. e.g. FROM alpine:latest
+2. RUN : Used to run shell commands. e.g. RUN apk update
+3. COPY : Used to copy files from working directory to the container. e.g. COPY index.html /usr/share/nginx/
+4. CMD : Used to run certain specified shell commands. e.g. CMD \["figlet","hello"\]
+5. EXPOSE : To run on a particular port. e.g. EXPOSE 3001
+
+---
+
+### Creating your first Dockerfile
+
+Create a Dockerfile, open it any text editor and add the following:
+
+FROM alpine:latest <br>
+RUN apk add figlet <br>
+CMD \["figlet", "Your name"\]<br>
+
+Build this Dockerfile using the command **``` docker build -t yourname/imagename . ```**
+Here, yourname is you username on [Docker-Hub](https://hub.docker.com) and imagename is the name that you give to the image. The dot is thelocation of the file i.e. the current directory e.g. thisisjustinm/webcat . To run this image, type in the command as **```docker run -d yourname/imagename```**.
+
+Once you have created the image, you can push it to the hub, so that others can access. To do so, login with command **```docker login```** and login with your docker hub username and password. Once logged in, you can push the image via, **```docker push yourname/imagename```**. 
+
+---
+
+### Creating your first webapp
+
+1. Create a webpage ```index.html```. An example code can be found [here](https://pastebin.com/wFzTnCAw).
+2. Create a Docker file
+ * FROM nginx:latest
+ * COPY index.html /usr/share/nginx/html
+ * EXPOSE 3000
+3. Build the Dockerfile: **```docker build -t yourusername/imagename```** and push it to Docker Hub.
+4. Run the container.
+
+
+### Some handy shortcuts
+
+1. List all containers : **```docker ps -aq```**
+2. Stop all running containers : **```docker stop $(docker ps -aq)```**
+3. Remove all stopped containers : **```docker rm $(docker ps -aq)```**
