@@ -123,6 +123,7 @@ Once you have created the image, you can push it to the hub, so that others can 
 3. Build the Dockerfile: **```docker build -t yourusername/imagename```** and push it to Docker Hub.
 4. Run the container.
 
+----
 
 ### Some handy shortcuts
 
