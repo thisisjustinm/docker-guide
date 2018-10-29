@@ -1,7 +1,7 @@
 ## Docker Guide 
 
-This is a temporary guide to get you guys started on Docker. This, by no means is a complete guide. Read the original documentation at
-[Docker Documentation](https://docs.docker.com/get-started/)
+This is a temporary guide to get you guys started on Docker. This, by **NO** means is a complete guide. Read the original documentation at
+[Docker Documentation](https://docs.docker.com/get-started/).
 
 Docker provides a way to run applications securely isolated in a container, packaged with all its dependencies and libraries.
 It is a platform for developers and sysadmins to develop, deploy, and run applications with containers. The use of Linux containers to deploy applications is called containerization. Containers are not new, but their use for easily deploying applications is.
