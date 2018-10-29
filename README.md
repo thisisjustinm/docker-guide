@@ -93,11 +93,19 @@ Now, we have sucessfully run a web application with Docker.
 ### Creating Docker Images
 
 A Dockerfile is a simple text file that containes a list of commands that Docker client calls while creating an image. Following are the importand Dockerfile commands to remember:
-1. FROM : The FROM instruction initializes a new build stage and sets the Base Image for subsequent instructions. As such, a valid Dockerfile must start with a FROM instruction. e.g. FROM alpine:latest
-2. RUN : The RUN instruction will execute any commands in a new layer on top of the current image and commit the results. The resulting committed image will be used for the next step in the Dockerfile. e.g. RUN apk update
-3. COPY : The COPY instruction copies new files or directories from <src> and adds them to the filesystem of the container at the path <dest>. e.g. COPY index.html /usr/share/nginx/
-4. CMD : Used to run certain specified shell commands.The main purpose of a CMD is to provide defaults for an executing container. e.g. CMD \["figlet","hello"\]
-5. EXPOSE : The EXPOSE instruction informs Docker that the container listens on the specified network ports at runtime. You can specify whether the port listens on TCP or UDP, and the default is TCP if the protocol is not specified. e.g. EXPOSE 3001
+1. **FROM** : The FROM instruction initializes a new build stage and sets the Base Image for subsequent instructions. As such, a valid Dockerfile must start with a FROM instruction. 
+e.g. FROM alpine:latest
+
+2. **RUN** : The RUN instruction will execute any commands in a new layer on top of the current image and commit the results. The resulting committed image will be used for the next step in the Dockerfile. 
+e.g. RUN apk update
+
+3. **COPY** : The COPY instruction copies new files or directories from <src> and adds them to the filesystem of the container at the path <dest>. 
+ e.g. COPY index.html /usr/share/nginx/
+ 
+4. **CMD** : Used to run certain specified shell commands.The main purpose of a CMD is to provide defaults for an executing container. e.g. CMD \["figlet","hello"\]
+
+5. **EXPOSE** : The EXPOSE instruction informs Docker that the container listens on the specified network ports at runtime. You can specify whether the port listens on TCP or UDP, and the default is TCP if the protocol is not specified. 
+e.g. EXPOSE 3001
 
 Read more about these [here](https://docs.docker.com/engine/reference/builder/).
 
