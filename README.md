@@ -72,7 +72,7 @@ Try out the following commands to get an overview of Docker.:
 * **```docker run -it alpine sh```** : This opens an interactive shell using the flag **-it**, where you can type more than one command. To exit, type **```exit```**.
 * **```docker stop <container_id>```** : To stop a running container.
 * **```docker rm <container_id>```** : To remove the stopped container.
-* **```docker container ```** : To remove all stopped containers.
+* **```docker container prune ```** : To remove all stopped containers.
 
 ---
 
@@ -80,7 +80,7 @@ Try out the following commands to get an overview of Docker.:
 
 In this example, I will be using a [web application](https://hub.docker.com/r/thisisjustinm/webcat/) already available on the docker-hub. Pull the image via **```docker pull thisisjustinm/webcat```**. Once you have downloaded, run it using the command **```docker run -d -P --name webcat thisisjustinm/webcat```**. The flag ```-d``` is used to run the container detached and ```-P``` is used to run the web application on a random port. The flag ```--name ``` is used to give a name to the container.
 
-Once you run it, you may get a hash like ```2044d71021a42dc6c06dedcc393f70a3f7c2a0b10435a145c639aa30afff6435f```. This means the container is running. To view/publish at which port the container is running, use the command **```docker port webcat```**. This publishes the port, which we can access in our browser.
+Once you run it, you may get a hash like ```2044d71021a422044d710.....0afff6435f```. This means the container is running. To view/publish at which port the container is running, use the command **```docker port webcat```**. This publishes the port, which we can access in our browser.
 
 To get the IP at which the machine is running use the command **```docker-machine ip default ```** . You may get something like: ```192.68.99.100``` (example)
 
@@ -92,7 +92,7 @@ Now, we have sucessfully run a web application with Docker.
 
 ### Creating Docker Images
 
-A Dockerfile is a simple text file that containes a list of commands that Docker client calls while creating an image. Following are the importand Dockerfile commands to remember:
+A Dockerfile is a simple text file that containes a list of commands that Docker client calls while creating an image. Following are the important Dockerfile instructions to remember:
 1. **FROM** : The FROM instruction initializes a new build stage and sets the Base Image for subsequent instructions. As such, a valid Dockerfile must start with a FROM instruction. 
 e.g. FROM alpine:latest
 
@@ -136,7 +136,7 @@ FROM nginx:latest<br>
 COPY index.html /usr/share/nginx/html<br>
 EXPOSE 3000<br>
 3. Build the Dockerfile: **```docker build -t yourusername/imagename```** and push it to Docker Hub.
-4. Run the container.
+4. Run the container, as explained above.
 
 ----
 
