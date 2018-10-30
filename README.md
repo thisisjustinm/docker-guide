@@ -1,6 +1,6 @@
 ## Docker Guide 
 
-This is a temporary guide to get you guys started on Docker. This is, by **NO** means a complete guide. Read the original documentation at[Docker Documentation](https://docs.docker.com/get-started/).
+This is a temporary guide to get you guys started on Docker. This is, by **NO** means a complete guide. Read the original documentation at [Docker Documentation](https://docs.docker.com/get-started/).
 
 ### Contents
 
