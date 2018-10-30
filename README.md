@@ -5,7 +5,8 @@ This is a temporary guide to get you guys started on Docker. This, by **NO** mea
 
 ### Contents
 
-* [Introduction](/README.md/#Introduction)
+* [Introduction](/#introduction)
+* [Testing ](/README.md/#Introduction)
 
 ### Introduction
 Docker provides a way to run applications securely isolated in a container, packaged with all its dependencies and libraries.
