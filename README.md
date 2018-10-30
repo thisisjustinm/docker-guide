@@ -1,6 +1,8 @@
 ## Docker Guide 
 
-This is a temporary guide to get you guys started on Docker. This is, by **NO** means a complete guide. Read the original documentation at [Docker Documentation](https://docs.docker.com/get-started/).
+This is a temporary guide to get you guys started on Docker. 
+This is, by **NO** means a complete guide. 
+Read the original documentation at [Docker Documentation](https://docs.docker.com/get-started/).
 
 ### Contents
 
@@ -35,7 +37,7 @@ Run  **```docker --version```** and ensure that you have a supported version of 
 
 ### Pulling your first image
 
-Run **``` docker run hello-world```** to download your first docker image. To check the downloaded images, type **```docker images```**.
+Run **``` docker pull hello-world```** to download your first docker image. To check the downloaded images, type **```docker images```**.
 If you get something like 
 
 REPOSITORY | TAG | IMAGE ID | SIZE
