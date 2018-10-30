@@ -1,28 +1,28 @@
 ## Docker Guide 
 
-This is a temporary guide to get you guys started on Docker. This, by **NO** means is a complete guide. Read the original documentation at
-[Docker Documentation](https://docs.docker.com/get-started/).
+This is a temporary guide to get you guys started on Docker. This is, by **NO** means a complete guide. Read the original documentation at[Docker Documentation](https://docs.docker.com/get-started/).
 
 ### Contents
 
-* [Introduction](/README.md/#introduction)
-* [Testing Docker](/README.md/#testing-docker)
-* [Pulling your first image](/README.md/#pulling-your-first-image)
+* [Introduction](#introduction)
+* [Testing Docker](#testing-docker)
+* [Pulling your first image](#pulling-your-first-image)
 * [Running your first image](#running-your-first-image)
-* [Testing ](/README.md/#testing-docker)
-* [Testing ](/README.md/#testing-docker)
-* [Testing ](/README.md/#testing-docker)
-* [Testing ](/README.md/#testing-docker)
-* [Testing ](/README.md/#testing-docker)
-* [Testing ](/README.md/#testing-docker)
-* [Testing ](/README.md/#testing-docker)
+* [Playing with Alpine](#playing-with-alpine)
+* [Webapps with Docker](#webapps-with-docker)
+* [Creating Docker Images](#creating-docker-images)
+* [Creating your first Dockerfile](#creating-your-first-dockerfile)
+* [Creating your first webapp](#creating-your-first-webapp)
+* [Some handy commands](#some-handy-commands)
+
+---
 
 ### Introduction
 Docker provides a way to run applications securely isolated in a container, packaged with all its dependencies and libraries.
 It is a platform for developers and sysadmins to develop, deploy, and run applications with containers. The use of Linux containers to deploy applications is called containerization. Containers are not new, but their use for easily deploying applications is.
 It makes use of container to make it easier to create, deploy, and run applications.
 
-A [*container*](https://docs.docker.com/get-started/part2/) is launched by running an *image*. An image is an executable package that includes everything needed to run an application--the code, a runtime, libraries, environment variables, and configuration files.
+A [*container*](https://docs.docker.com/get-started/part2/) is launched by running an [*image*](https://docs.docker.com/engine/reference/commandline/images/). An image is an executable package that includes everything needed to run an application--the code, a runtime, libraries, environment variables, and configuration files.
 
 A container is a runtime instance of an image--what the image becomes in memory when executed (that is, an image with state, or a user process). You can see a list of your running containers with the command **``` docker ps```** just as you would in Linux.
 
@@ -74,6 +74,7 @@ For more examples and ideas, visit:
  https://docs.docker.com/get-started/
   
 ```
+This output tells that our installation is working properly.
 
 ---
 
@@ -135,7 +136,7 @@ RUN apk add figlet <br>
 CMD \["figlet", "Your name"\]<br>
 
 Build this Dockerfile using the command **``` docker build -t yourusername/imagename . ```**
-Here, yourname is you username on [Docker-Hub](https://hub.docker.com) and imagename is the name that you give to the image. The dot is thelocation of the file i.e. the current directory e.g. thisisjustinm/webcat . To run this image, type in the command as **```docker run -d yourusername/imagename```**.
+Here, yourname is you username on [Docker Hub](https://hub.docker.com) and imagename is the name that you give to the image. The dot is thelocation of the file i.e. the current directory e.g. thisisjustinm/webcat . To run this image, type in the command as **```docker run -d yourusername/imagename```**.
 
 Once you have created the image, you can push it to the hub, so that others can access. To do so, login with command **```docker login```** and login with your docker hub username and password. Once logged in, you can push the image via, **```docker push yourusername/imagename```**. 
 
@@ -155,7 +156,7 @@ EXPOSE 3000<br>
 
 ----
 
-### Some handy shortcuts
+### Some handy commands
 
 1. List all containers : **```docker ps -aq```**
 2. Stop all running containers : **```docker stop $(docker ps -aq)```**
